@@ -2,6 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rock Paper Scissors Part 2</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <!-- Latest compiled and minified CSS -->
@@ -9,79 +10,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-  <div class="jumbotron text-center">
-    <h1><i class="fa fa-hand-rock-o" aria-hidden="true"></i> <i class="fa fa-paper-plane" aria-hidden="true"></i> <i class="fa fa-scissors" aria-hidden="true"></i> Yo!</h1>
-    <p>Press "r" for rock, "p" for paper, "s" for scissors.</p>
-    <p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Rock</a>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Paper</a>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Scissors</a>
-    </p>
-  </div>
+    <div class="jumbotron text-center col-md-12">
+      <h1><i class="fa fa-hand-rock-o" aria-hidden="true"></i> <i class="fa fa-paper-plane" aria-hidden="true"></i> <i class="fa fa-scissors" aria-hidden="true"></i> Yo!</h1>
+      <p id="keyboard-instructions">Press "r" for rock, "p" for paper, "s" for scissors.</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="rockClick">Rock</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="paperClick">Paper</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="scissorClick">Scissors</a>
+      </p>
+    </div>
 
-    <div id="game">
+    <div id="game" class="col-md-12">
 
     </div>
 
-    <script type="text/javascript">
-
-      // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-      var options = ["r", "p", "s"];
-      var computerScore = 0;
-      var userScore = 0;
-      var tieScore = 0;
-      // This function is run whenever the user presses a key.
-      document.onkeyup = function(event) {
-        // Determines which key was pressed
-        var userGuess = event.key;
-        // Alerts the key the user pressed (userGuess).
-        console.log(userGuess);
-        // Randomly chooses a choice from the options array. This is the Computer's guess.
-        var computerGuess = options[Math.floor(Math.random() * options.length)];
-        // Alerts the Computer's guess.
-        console.log(computerGuess);
-
-        // if (userGuess === options.indexOf(-1))
-
-        //bands.indexOf() === -1
-        if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
-          // replace the tie comparisons with indexOf()
-          if (  (userGuess === "r" && computerGuess === "r") ||
-                (userGuess === "s" && computerGuess === "s") ||
-                (userGuess === "p" && computerGuess === "p")) {
-            tieScore++;
-            console.log("TIE TIE");
-          } else if (userGuess === "r" && computerGuess === "s") {
-            userScore++;
-          } else if (userGuess === "r" && computerGuess === "p") {
-            computerScore++;
-          } else if (userGuess === "s" && computerGuess === "r") {
-            computerScore++;
-          } else if (userGuess === "s" && computerGuess === "p") {
-            userScore++;
-          } else if (userGuess === "p" && computerGuess === "r") {
-            userScore++;
-          } else if (userGuess === "p" && computerGuess === "s") {
-            computerScore++;
-          }
-          console.log("User Score = " + userScore);
-          console.log("Computer Score = " + computerScore);
-          console.log("Tie Score = " + tieScore);
-
-          var html = "<h4>You: " + userGuess +
-          " Computer: " + computerGuess + "</h4>" +
-          "<h2>wins: " + userScore + "</h2>" +
-          "<h2>losses: " + computerScore + "</h2>" +
-          "<h2>ties: " + tieScore + "</h2>";
-          document.querySelector("#game").innerHTML = html;
-        }
-      };
-
-    </script>
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="scripts/scripts.js" charset="utf-8"></script>
+
   </body>
 </html>
