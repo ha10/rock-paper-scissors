@@ -1,0 +1,15 @@
+/*html {
+  font-family: sans-serif;
+
+}
+
+body {
+  width: 80%;
+  margin: auto;
+}*/
+
+#game {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
