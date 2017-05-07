@@ -41,11 +41,11 @@
       console.log("Computer Score = " + computerScore);
       console.log("Tie Score = " + tieScore);
 
-      var html = "<h4>You: " + userGuess +
-      " Computer: " + computerGuess + "</h4>" +
-      "<h4>wins: " + userScore + "</h4>" +
-      "<h4>losses: " + computerScore + "</h4>" +
-      "<h4>ties: " + tieScore + "</h4>";
+      var html = "<h3>You: " + userGuess +
+      " Computer: " + computerGuess + "</h3>" +
+      "<h3>Wins: " + userScore + "</h3>" +
+      "<h3>Losses: " + computerScore + "</h3>" +
+      "<h3>Ties: " + tieScore + "</h3>";
       document.querySelector("#game").innerHTML = html;
     }
   };
@@ -81,11 +81,11 @@
       console.log("Computer Score = " + computerScore);
       console.log("Tie Score = " + tieScore);
 
-      var html = "<h4>You: " + userGuess +
-      " Computer: " + computerGuess + "</h4>" +
-      "<h4>wins: " + userScore + "</h4>" +
-      "<h4>losses: " + computerScore + "</h4>" +
-      "<h4>ties: " + tieScore + "</h4>";
+      var html = "<h3>You: " + userGuess +
+      " Computer: " + computerGuess + "</h3>" +
+      "<h3>Wins: " + userScore + "</h3>" +
+      "<h3>Losses: " + computerScore + "</h3>" +
+      "<h3>Ties: " + tieScore + "</h3>";
       document.querySelector("#game").innerHTML = html;
     }
   };

@@ -1,21 +1,17 @@
-/*html {
-  font-family: sans-serif;
-
-}
-
-body {
-  width: 80%;
-  margin: auto;
-}*/
-
 #game {
-  width: 200px;
+  /*width: 200px;*/
   margin: 0 auto;
   text-align: center;
+  /*font-family: 'Advent Pro', sans-serif;*/
+  font-family: 'Geo', sans-serif;
+  /*font-family: 'Englebert', sans-serif;*/
 }
 
-.keyboard-instructions {
-  display: block;
+p,
+h1,
+h2,
+h3 {
+  font-family: 'Geo', sans-serif;
 }
 
 @media screen and (max-width: 640px) {
